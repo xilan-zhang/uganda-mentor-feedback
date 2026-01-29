@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Experiment - Profile Pages</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .participant-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+        }
+        .participant-link {
+            display: block;
+            padding: 15px 10px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .participant-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .participant-link.hidden {
+            display: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mentor Experiment</h1>
+    <p class="subtitle">Profile Pages for Phone Call Survey</p>
+
+    <input type="text" class="search-box" placeholder="Search participant ID (e.g., P001)" id="search">
+
+    <div class="participant-list" id="list">
+        <a href="P001.html" class="participant-link">P001</a>
+        <a href="P002.html" class="participant-link">P002</a>
+        <a href="P003.html" class="participant-link">P003</a>
+        <a href="P004.html" class="participant-link">P004</a>
+        <a href="P005.html" class="participant-link">P005</a>
+        <a href="P006.html" class="participant-link">P006</a>
+        <a href="P007.html" class="participant-link">P007</a>
+        <a href="P008.html" class="participant-link">P008</a>
+        <a href="P009.html" class="participant-link">P009</a>
+        <a href="P010.html" class="participant-link">P010</a>
+        <a href="P011.html" class="participant-link">P011</a>
+        <a href="P012.html" class="participant-link">P012</a>
+        <a href="P013.html" class="participant-link">P013</a>
+        <a href="P014.html" class="participant-link">P014</a>
+        <a href="P015.html" class="participant-link">P015</a>
+        <a href="P016.html" class="participant-link">P016</a>
+        <a href="P017.html" class="participant-link">P017</a>
+        <a href="P018.html" class="participant-link">P018</a>
+        <a href="P019.html" class="participant-link">P019</a>
+        <a href="P020.html" class="participant-link">P020</a>
+        <a href="P021.html" class="participant-link">P021</a>
+        <a href="P022.html" class="participant-link">P022</a>
+        <a href="P023.html" class="participant-link">P023</a>
+        <a href="P024.html" class="participant-link">P024</a>
+        <a href="P025.html" class="participant-link">P025</a>
+        <a href="P026.html" class="participant-link">P026</a>
+        <a href="P027.html" class="participant-link">P027</a>
+        <a href="P028.html" class="participant-link">P028</a>
+        <a href="P029.html" class="participant-link">P029</a>
+        <a href="P030.html" class="participant-link">P030</a>
+        <a href="P031.html" class="participant-link">P031</a>
+        <a href="P032.html" class="participant-link">P032</a>
+        <a href="P033.html" class="participant-link">P033</a>
+        <a href="P034.html" class="participant-link">P034</a>
+        <a href="P035.html" class="participant-link">P035</a>
+        <a href="P036.html" class="participant-link">P036</a>
+        <a href="P037.html" class="participant-link">P037</a>
+        <a href="P038.html" class="participant-link">P038</a>
+        <a href="P039.html" class="participant-link">P039</a>
+        <a href="P040.html" class="participant-link">P040</a>
+        <a href="P041.html" class="participant-link">P041</a>
+        <a href="P042.html" class="participant-link">P042</a>
+        <a href="P043.html" class="participant-link">P043</a>
+        <a href="P044.html" class="participant-link">P044</a>
+        <a href="P045.html" class="participant-link">P045</a>
+        <a href="P046.html" class="participant-link">P046</a>
+        <a href="P047.html" class="participant-link">P047</a>
+        <a href="P048.html" class="participant-link">P048</a>
+        <a href="P049.html" class="participant-link">P049</a>
+        <a href="P050.html" class="participant-link">P050</a>
+    </div>
+
+    <p class="footer">Stanford Research Study</p>
+
+    <script>
+        document.getElementById('search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.participant-link').forEach(link => {
+                const id = link.textContent.toLowerCase();
+                link.classList.toggle('hidden', !id.includes(query));
+            });
+        });
+    </script>
+</body>
+</html>
